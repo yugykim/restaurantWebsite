@@ -9,8 +9,14 @@ html, body {
 }
 
 
-header {
+/*header {
   background-image: url("/img/background.jpg");
+  opacity: 0.95;
+}
+*/
+
+header {
+  background-color: black;
   opacity: 0.95;
 }
 
