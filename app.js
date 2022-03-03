@@ -107,7 +107,7 @@ function myformSubmit(event) {
 
   const orderCustomerInfo = document.createElement("div");
   orderCustomerInfo.classList.add("ordered-customerInfo");
-  orderCustomerInfo.innerHTML = `<p>first name : ${firstName} <hr><br> Last name : ${lastName} <hr><br> Phone Number : ${phoneNumber} <hr><br>${pickUpOrDelivery} <hr><br> Time : ${orderTime}</p>`
+  orderCustomerInfo.innerHTML = `<p>first name : ${firstName} <hr><br> Last name : ${lastName} <hr><br> Phone Number : ${phoneNumber} <hr><br>${pickUpOrDelivery} <hr><br> Time : ${orderTime} <hr><hr><br></p>`
 
   orderlist.appendChild(orderDiv);
   orderlist.appendChild(showingTotalPrice);
