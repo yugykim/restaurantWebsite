@@ -1,2 +1,3 @@
 # restaurantWebsite
-this is an web development assignment at SAIT college
+this is my web development assignment at SAIT college
+Live Demo : https://yugykim.github.io/restaurantWebsite/
