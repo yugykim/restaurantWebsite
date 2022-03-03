@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel='stylesheet' href="style.css">
+  <script src="app.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/505568b884.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div id="navBar">
+      <h1>Café Europa<h1>
+    </div>
+    <div id="header-main">
+      <div class="order-button">
+        <a id="order" onclick="showOrderBoard()" href="#main-menu">ORDER</a>
+      </div>
+    </div>
+  </header>
+  <div id="main">
+    <div id="main-menu">
+      <div id="flex-menu" hidden>
+        <form>
+          <div class="menu">
+            <h2>MENU</h2>
+            <hr>
+            <section>
+              <div id="margherita-content">
+                <div class="inner-box">
+                  <div class="choice">
+                    <label>Margherita</label>
+                    <br>
+                    <input type="number" name="margherita" id="margherita" oninput="updateData(this.value, this.id)"
+                           min="0">
+                    <p>$12.00</p>
+                    <p class="button" id="margherita-content" onclick="selected(this.id)">Add</p>
+                  </div>
+                  <img id="menu-img" src="img/pizza.png">
+                </div>
+              </div>
+              <div id="formaggi-content">
+                <div class="inner-box">
+                  <div class="choice">
+                    <label>Quattro Formaggi</label>
+                    <br>
+                    <input type="number" name="formaggi" id="formaggi" oninput="updateData(this.value, this.id)"
+                           min="0">
+                    <p>$12.50</p>
+                    <p id="formaggi-content" onclick="selected(this.id)">Add</p>
+                  </div>
+                  <img id="menu-img" src="img/pizza.png">
+                </div>
+              </div>
+              <div id="capricciosa-content">
+                <div class="inner-box">
+                  <div class="choice">
+                    <label>Capricciosa</label>
+                    <br>
+                    <input type="number" name="capricciosa" id="capricciosa" oninput="updateData(this.value, this.id)"
+                           min="0">
+                    <p>$13.00</p>
+                    <p id="capricciosa-content" onclick="selected(this.id)">Add</p>
+                  </div>
+                  <img id="menu-img" src="img/pizza.png">
+                </div>
+              </div>
+              <div id="schnitzel-content">
+                <div class="inner-box">
+                  <div class="choice">
+                    <label>Schnitzel</label>
+                    <br>
+                    <input type="number" name="schnitzel" id="schnitzel" oninput="updateData(this.value, this.id)"
+                           min="0">
+                    <p>$8.50</p>
+                    <p id="schnitzel-content" onclick="selected(this.id)">Add</p>
+                  </div>
+                  <img id="menu-img" src="img/pizza.png">
+                </div>
+              </div>
+              <div id="mixGrill-content">
+                <div class="inner-box">
+                  <div class="choice">
+                    <label>Mixed Grill</label>
+                    <br>
+                    <input type="number" name="mixGrill" id="mixGrill" oninput="updateData(this.value, this.id)"
+                           min="0">
+                    <p>$9.50</p>
+                    <p id="mixGrill-content" onclick="selected(this.id)">Add</p>
+                  </div>
+                  <img id="menu-img" src="img/pizza.png">
+                </div>
+              </div>
+              <div id="bigBeefBun-content">
+                <div class="inner-box">
+                  <div class="choice">
+                    <label>Big Beef on a Bun</label>
+                    <br>
+                    <input type="number" name="bigBeefBun" id="bigBeefBun" oninput="updateData(this.value, this.id)"
+                           min="0">
+                    <p>$10.00</p>
+                    <p id="bigBeefBun-content" onclick="selected(this.id)">Add</p>
+                  </div>
+                  <img id="menu-img" src="img/pizza.png">
+                </div>
+              </div>
+              <div id="coffee-content">
+                <div class="inner-box">
+                  <div class="choice">
+                    <label>Coffee</label>
+                    <br>
+                    <input type="number" name="coffee" id="coffee" oninput="updateData(this.value, this.id)" min="0">
+                    <p>$2.00</p>
+                    <p id="coffee-content" onclick="selected(this.id)">Add</p>
+                  </div>
+                  <img id="menu-img" src="img/coffee.png">
+                </div>
+              </div>
+              <div id="latte-content">
+                <div class="inner-box">
+                  <div class="choice">
+                    <label>Latte</label>
+                    <br>
+                    <input type="number" name="latte" id="latte" oninput="updateData(this.value, this.id)" min="0">
+                    <p>$2.50</p>
+                    <p id="latte-content" onclick="selected(this.id)">Add</p>
+                  </div>
+                  <img id="menu-img" src="img/latte.png">
+                </div>
+              </div>
+              <div id="softDrink-content">
+                <div class="inner-box">
+                  <div class="choice">
+                    <label>Soft Drink</label>
+                    <br>
+                    <input type="number" name="softDrink" id="softDrink" oninput="updateData(this.value, this.id)"
+                           min="0">
+                    <p>$1.75</p>
+                    <p id="softDrink-content" onclick="selected(this.id)">Add</p>
+                  </div>
+                  <img id="menu-img" src="img/softDrink.png">
+                </div>
+              </div>
+            </section>
+          </div>
+        </form>
+      </div>
+      <div id="orderAndCart">
+        <div id="cart" hidden>
+          <h2 class="cart-name">Your Cart</h2>
+          <hr>
+          <div id="add-card">
+          </div>
+          <div class="contact">
+            <form action="none" onsubmit="myformSubmit(event)" name="form">
+              <div class="form">
+                <label>Date</label>
+                <input type="datetime-local" id="orderTime" name="orderTime" value="2022-06-12T19:30">
+                <hr>
+                <label>Pick up</label>
+                <input type="radio" id="pickUp" value="pickUp" name="pickUpOrDelivery" required>
+                <label>Delivery</label>
+                <input type="radio" id="delivery" value="delivery" name="pickUpOrDelivery" required>
+                <hr>
+                <label>First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="firstName" value="" required>
+                <hr>
+                <label>Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="lastName" value="" required>
+                <hr>
+                <label>Contact Phone</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" placeholder="lastName" maxlength="10" value=""
+                       required>
+                <hr>
+                <input type="submit" value="Order" onclick="myformSubmit()">
+              </div>
+            </form>
+          </div>
+        </div>
+        <div id="order-list" hidden>
+          <h2>Order Info</h2>
+          <hr>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
