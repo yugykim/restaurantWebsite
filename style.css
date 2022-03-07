@@ -4,8 +4,9 @@ body {
   margin: 0;
 }
 
+
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 header {
@@ -144,7 +145,7 @@ hr {
 .contact {
   margin: 10px;
   border: 1px solid black;
-  padding: auto;
+  padding: 0;
   border-radius: 10px;
 }
 
